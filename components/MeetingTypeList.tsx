@@ -104,6 +104,7 @@ const MeetingTypeList = () => {
         <MeetingModel
           isOpen={meetingState === 'isScheduleMeeting'}
           onClose={() => setMeetingState(undefined)}
+          className="text-center"
           title="Create Meeting"
           handleClick={createMeeting}
         >
@@ -136,18 +137,18 @@ const MeetingTypeList = () => {
         </MeetingModel>
       ) : (
         <MeetingModel
-          isOpen={meetingState === 'isScheduleMeeting'}
-          onClose={() => setMeetingState(undefined)}
-          title="Meeting Created"
-          handleClick={() => {
-            navigator.clipboard.writeText(meetingLink);
-            toast({ title: 'Link Copied' });
-          }}
-          image={'/icons/checked.svg'}
-          buttonIcon="/icons/copy.svg"
-          className="text-center"
-          buttonText="Copy Meeting Link"
-        />
+            isOpen={meetingState === 'isScheduleMeeting'}
+            onClose={() => setMeetingState(undefined)}
+            title="Meeting Created"
+
+            handleClick={() => {
+              navigator.clipboard.writeText(meetingLink);
+              toast({ title: 'Link Copied' });
+            } }
+            image={'/icons/checked.svg'}
+            buttonIcon="/icons/copy.svg"
+            className="text-center"
+            buttonText="Copy Meeting Link" children={undefined}        />
       )}
 
       <MeetingModel
@@ -171,8 +172,9 @@ const MeetingTypeList = () => {
         title="Start an Instant Meeting"
         className="text-center"
         buttonText="Start Meeting"
-        handleClick={createMeeting}
-      />
+        handleClick={createMeeting} children={undefined}      />
+       
+     
     </section>
   );
 };
