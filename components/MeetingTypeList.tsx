@@ -148,7 +148,8 @@ const MeetingTypeList = () => {
             image={'/icons/checked.svg'}
             buttonIcon="/icons/copy.svg"
             className="text-center"
-            buttonText="Copy Meeting Link" children={undefined}        />
+            buttonText="Copy Meeting Link"      
+               />
       )}
 
       <MeetingModel
@@ -166,13 +167,18 @@ const MeetingTypeList = () => {
         />
       </MeetingModel>
 
-      <MeetingModel
-        isOpen={meetingState === 'isInstantMeeting'}
-        onClose={() => setMeetingState(undefined)}
-        title="Start an Instant Meeting"
-        className="text-center"
-        buttonText="Start Meeting"
-        handleClick={createMeeting} children={undefined}      />
+      {meetingState === 'isInstantMeeting' && (
+  <MeetingModel
+    isOpen={true}
+    onClose={() => setMeetingState(undefined)}
+    title="Start an Instant Meeting"
+    className="text-center"
+    buttonText="Start Meeting"
+    handleClick={createMeeting}
+  />
+)}
+
+
        
      
     </section>
