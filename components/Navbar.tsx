@@ -10,13 +10,13 @@ const Navbar = () => {
       <Link href='/' className='flex items-center gap-1 '>
       <Image
       src='/icons/logo.jpeg'
-      width={90}
-      height={120}
+      width={120}
+      height={80}
       alt="Connet Hub"
-      className='max-sm:size-10'
+      className='max-sm:size-10 rounded-lg'
       
     />
-    <p className='text-[26px] font-extrabold text-white max-sm:hidden'>ConnectHub</p>
+   
       
       </Link>
       <div className='flex-between gap-5'>
