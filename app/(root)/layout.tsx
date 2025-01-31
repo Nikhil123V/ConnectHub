@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "ConnectHub",
   description: "Video Calling app",
   icons:{
-    icon:'/icons/logo.png',
+    icon:'/icons/logo.jpeg',
   }
 };
 
