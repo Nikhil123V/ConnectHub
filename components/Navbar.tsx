@@ -10,8 +10,8 @@ const Navbar = () => {
       <Link href='/' className='flex items-center gap-1 '>
       <Image
       src='/icons/logo.jpeg'
-      width={32}
-      height={32}
+      width={90}
+      height={120}
       alt="Connet Hub"
       className='max-sm:size-10'
       
